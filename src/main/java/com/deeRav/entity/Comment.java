@@ -1,10 +1,14 @@
 package com.deeRav.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import java.util.Date;
 
 @Entity
 @Table(name="comments")
@@ -21,6 +25,10 @@ public class Comment {
     private User user;
     @ManyToOne
     private Post post;
+    @CreationTimestamp
+    private Date addedDate;
+    @UpdateTimestamp
+    private Date updatedDate;
 
 
 

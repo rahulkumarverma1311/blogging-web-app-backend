@@ -23,7 +23,6 @@ public class GlobleExceptionHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String,String>>handalMethodArgumentNotValidException(MethodArgumentNotValidException ex){
-
         Map<String,String> respo = new HashMap<>();
         ex.getBindingResult().getAllErrors().forEach((errors)->{
             String fieldName = ((FieldError) errors).getField();

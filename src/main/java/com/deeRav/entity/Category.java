@@ -1,13 +1,17 @@
 package com.deeRav.entity;
 
-import jakarta.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
+import javax.persistence.*;
 import java.util.AbstractList;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -24,6 +28,10 @@ public class Category {
     private String categoryTitle;
     @Column(name = "description")
     private String categoryDescription;
+    @CreationTimestamp
+    private Date addedDate;
+    @UpdateTimestamp
+    private Date updatedDate;
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Post> posts = new ArrayList<>();
 }

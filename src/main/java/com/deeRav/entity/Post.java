@@ -1,10 +1,12 @@
 package com.deeRav.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.util.*;
 
@@ -24,8 +26,10 @@ public class Post {
     @Column(length = 500)
     private String content;
     private String imageUrl;
-
+    @CreationTimestamp
     private Date addedDate;
+    @UpdateTimestamp
+    private Date updatedDate;
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
@@ -33,4 +37,5 @@ public class Post {
     private User user;
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private Set<Comment> comments = new HashSet<>();
+    
 }

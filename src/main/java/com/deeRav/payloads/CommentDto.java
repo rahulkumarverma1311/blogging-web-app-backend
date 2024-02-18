@@ -2,7 +2,7 @@ package com.deeRav.payloads;
 
 import com.deeRav.entity.Post;
 import com.deeRav.entity.User;
-import jakarta.persistence.ManyToOne;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

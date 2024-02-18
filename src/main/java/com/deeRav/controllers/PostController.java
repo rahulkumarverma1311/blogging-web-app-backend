@@ -7,7 +7,7 @@ import com.deeRav.payloads.PostDto;
 import com.deeRav.payloads.PostResponse;
 import com.deeRav.service.PostService;
 import com.deeRav.serviceImpl.FileServiceImpl;
-import jakarta.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -16,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
