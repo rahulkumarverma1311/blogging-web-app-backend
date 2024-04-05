@@ -1,6 +1,7 @@
 package com.deeRav.entity;
 
-
+import javax.persistence.*;
+//import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,8 +9,7 @@ import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import javax.persistence.*;
-import java.util.AbstractList;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

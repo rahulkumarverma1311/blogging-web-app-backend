@@ -10,8 +10,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 
 @SpringBootApplication
-public class BlogAppApisApplication  {
-	
+public class BlogAppApisApplication   {
+	/*
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+	 */
 
     public static void main(String[] args){
 
@@ -21,7 +24,13 @@ public class BlogAppApisApplication  {
     public ModelMapper modelMapper(){
         return new ModelMapper();
     }
-	
 
+/*
+    @Override
+    public void run(String... args) throws Exception {
+        System.out.println(this.passwordEncoder.encode("12345"));
 
+    }
+
+ */
 }

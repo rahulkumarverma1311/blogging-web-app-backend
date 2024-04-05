@@ -1,6 +1,8 @@
 package com.deeRav.payloads;
 
 
+//import jakarta.validation.constraints.NotBlank;
+//import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,6 +10,7 @@ import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+
 
 @Getter
 @Setter
@@ -22,4 +25,5 @@ public class CategoryDto {
     @NotBlank
     @Size(min= 10, message = "the min size of  description should be 10 charactor")
     private String categoryDescription;
+
 }
